@@ -12,4 +12,6 @@ terraform {
 
 module "ecs_fargate" {
   source = "./modules/ecs-cluster"
+
+  name = ""
 }
