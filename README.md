@@ -1,5 +1,5 @@
 # terraform-aws-ecs-fargate
-Terraform module for create [ECS Fargate](https://www.terraform.io/docs/providers/aws/r/ecs_cluster.html) on AWS
+Terraform module for create [ECS cluster](https://www.terraform.io/docs/providers/aws/r/ecs_cluster.html) Fargate on AWS
 
 
 ### Usage
