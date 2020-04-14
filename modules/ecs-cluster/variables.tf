@@ -22,9 +22,11 @@ variable "capacity_providers" {
 
 variable "setting" {
   description = "Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below."
-  type        = map(string)
-  default = {
-    name  = "containerInsights"
-    value = "disabled"
-  }
+  type        = list(map(string))
+  default = [
+    {
+      name  = "containerInsights"
+      value = "disabled"
+    }
+  ]
 }
