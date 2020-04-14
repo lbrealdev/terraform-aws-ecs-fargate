@@ -16,8 +16,8 @@ variable "name" {
 
 variable "capacity_providers" {
   description = "List of short names of one or more capacity providers to associate with the cluster. Valid values also include FARGATE and FARGATE_SPOT."
-  type = list(string)
-  default = ["FARGATE", "FARGATE_SPOT"]
+  type        = list(string)
+  default     = ["FARGATE", "FARGATE_SPOT"]
 }
 
 variable "setting" {
