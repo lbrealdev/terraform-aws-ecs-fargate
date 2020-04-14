@@ -10,3 +10,6 @@ terraform {
 # DEPLOY ECS CLUSTER FARGATE
 # ---------------------------------------------------------------------------------------------------------------------
 
+module "ecs_fargate" {
+  source = "./modules/ecs-cluster"
+}
