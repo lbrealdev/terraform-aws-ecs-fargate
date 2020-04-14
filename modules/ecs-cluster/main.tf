@@ -11,6 +11,13 @@ terraform {
 # CREATE ECS CLUSTER FARGATE
 # ---------------------------------------------------------------------------------------------------------------------
 
+locals {
+  tags = {
+    Description = "Managed by Terraform"
+    Environment = "Testing"
+  }
+}
+
 resource "aws_ecs_cluster" "main" {
   count = var.create_ecs ? 1 : 0
 
@@ -24,4 +31,11 @@ resource "aws_ecs_cluster" "main" {
       value = setting.value["value"]
     }
   }
+
+  tags = merge(
+    local.tags,
+    {
+      Name = format("%s", var.name)
+    }
+  )
 }
